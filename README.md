@@ -1,5 +1,22 @@
 # Luck
 
+# luck_based_game This is a luck based game. There are two player in the game you need to pick a number form first or last only. based on there luck after number selection winner will be declared.
+
+
+# Project Theme
+
+Project theme is to declare who is winner based on there selection.
+
+# How to run project
+
+1. Clone project from https://github.com/Sanjeev-92/luck
+2. open project on VsCode or any other angular editor
+3. in root termincal install node to run this project -  In ubantu (sudo npm i)
+4. now run npm start 
+5. go to your browser and type http://localhost:4200/game 
+6. now play the game 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
 ## Development server
