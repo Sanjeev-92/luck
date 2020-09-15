@@ -1,0 +1,52 @@
+.box{
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+}
+.make-align{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;;
+}   
+.center {
+    font-size: 35px;
+    position: absolute;
+    padding: 14px 42px 26px 21px;
+  }
+.container{
+    margin-top: 5%;
+}
+.player{
+    border: 2px solid black;
+    width: 150px;
+    height: 70px;
+    margin-top: 20px;
+    background: #FFC107; 
+} 
+.player_2{
+    margin-left: 730px;
+}
+.firstOrlast{
+    background-color: yellow;
+    cursor: pointer;
+}
+.not-allowed{
+    cursor: not-allowed;
+    background-color: #c2bdbd;
+}
+tr td {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 35px;
+}
+.buttons{
+    padding: 20px;
+}
+.buttons-container{
+    margin: 10px 0;
+}
+a{
+    cursor: pointer;
+    color: blue;
+}

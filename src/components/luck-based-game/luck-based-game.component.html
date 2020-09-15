@@ -1,0 +1,44 @@
+<div class="container"><!-------------------------Main block-->
+    <div class="make-align" *ngIf="gameModel.data.length>0"><!---------Game play-->
+        <table border="2">
+            <tr>
+                <ng-container *ngFor="let group of gameModel.data; let i=index; let l=last;">
+                    <td [ngClass]="(i == 0 || l == true)?'firstOrlast':'not-allowed'" (click)="getScores(i,l)">
+                        <span class="">{{group}}</span>
+                    </td>
+                </ng-container>
+            </tr>
+        </table>
+    </div>
+    <div class="make-align" *ngIf="gameModel.data.length ==0"><!----------Success message block-->
+       <h2>{{shared.winnerMessage}}</h2> 
+    </div>
+    <div class="make-align"> <!------Players-->
+        <div class="buttons-container">
+            <button class="buttons" type="button" [disabled]="payer_1.isDisabled?'null':payer_1.isDisabled">{{payer_1.name}}</button>
+           
+            <div *ngIf="payer_1.scores.length>0">
+                <span>{{payer_1.name}} scores are</span>  <!------Player score-->
+                <ul>
+                    <li *ngFor="let score of payer_1.scores">{{score}}</li>
+                </ul>
+                <span>Total score : <b>{{payer_1.score}}</b></span>
+            </div>
+            
+        </div>
+        <div class="buttons-container">
+            <button class="buttons" type="button" [disabled]="payer_2.isDisabled?'null':payer_2.isDisabled"> {{payer_2.name}}</button>
+           
+            <div *ngIf="payer_1.scores.length>0">
+                <span>{{payer_2.name}} scores are</span>  <!------Player score-->
+                <ul>
+                    <li *ngFor="let score of payer_2.scores">{{score}}</li>
+                </ul>
+                <span>Total score : <b>{{payer_2.score}}</b></span>
+            </div>
+        </div>
+    </div>
+    <div class="make-align"> <!----------------------Restart game-->
+        <a (click)="restartGame()">Start new game</a>
+    </div>
+</div>
